@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-monaco",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
