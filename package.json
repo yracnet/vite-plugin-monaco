@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-monaco",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "scripts": {
     "prepublish": "yarn build",
@@ -10,7 +10,7 @@
   },
   "author": "Willyams Yujra",
   "type": "module",
-  "main": "./dist/cjs/main.js",
+  "main": "./dist/es/main.js",
   "module": "./dist/es/main.js",
   "types": "./dist/ts/main.d.ts",
   "files": [
@@ -24,7 +24,7 @@
   "bugs": "https://github.com/yracnet/vite-plugin-monaco/issues",
   "dependencies": {},
   "peerDependencies": {
-    "monaco-editor": "^0",
+    "monaco-editor": "^0.1",
     "vite": "^2 || ^3 || ^4 || ^5 || ^6"
   },
   "devDependencies": {

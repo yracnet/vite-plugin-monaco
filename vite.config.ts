@@ -18,7 +18,7 @@ export default defineConfig({
     },
     lib: {
       entry: resolve("src/main.ts"),
-      formats: ["es", "cjs"],
+      formats: ["es"],
       fileName: () => "[format]/[name].js",
     },
   },

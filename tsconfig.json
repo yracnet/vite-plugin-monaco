@@ -2,11 +2,11 @@
   "compilerOptions": {
     // Módulos y resolución de módulos para trabajar con ESNext y Bundlers
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",
     "target": "ESNext",
     // Generación de tipos
     "declaration": true,
-    "declarationDir": "dist/types",
+    "declarationDir": "dist/ts",
     // Asegurando que se generen solo los tipos y no el código JavaScript si solo necesitamos los tipos
     "emitDeclarationOnly": false,
     // Soporte para JavaScript nativo

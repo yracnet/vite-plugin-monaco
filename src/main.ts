@@ -12,7 +12,7 @@ type PluginConfig = {
   monacoLib: string;
   languages: (EditorLanguage | string)[];
   features: (EditorFeature | string)[];
-  optimize: boolean;
+  noOptimize: boolean;
 };
 type UserConfig = Partial<PluginConfig>;
 
@@ -53,7 +53,7 @@ export const monacoPlugin = (userConfig: UserConfig = {}): PluginOption => {
     monacoLib = "monaco-editor",
     languages = ["json", "javascript"],
     features = ["browser"],
-    optimize = true,
+    noOptimize = false,
   } = userConfig;
   return {
     name: "vite-plugin-monaco",
@@ -66,7 +66,7 @@ export const monacoPlugin = (userConfig: UserConfig = {}): PluginOption => {
       }
       const code = createCode({ features, languages, monacoLib });
       fs.writeFileSync(fileName, code, {});
-      if (optimize) {
+      if (noOptimize) {
         config.optimizeDeps = config.optimizeDeps || {};
         config.optimizeDeps.exclude = config.optimizeDeps.exclude || [];
         config.optimizeDeps.exclude.push("monaco-editor");
